@@ -1,0 +1,9 @@
+#!/bin/bash
+_PROG=DFRobotUPS
+
+sudo systemctl start $_PROG
+echo
+sudo systemctl status $_PROG
+echo
+ps -ef | { head -1 ; grep --color=always "python3" ; }
+
